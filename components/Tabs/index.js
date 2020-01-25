@@ -13,7 +13,7 @@ axios
 
     .get('https://lambda-times-backend.herokuapp.com/topics')
     .then((response) => {
-        console.log('get response: ',response)
+        // console.log('get response: ',response)
 
         const newTopicTab = response.data.topics
         
@@ -32,6 +32,12 @@ const createTopics = (topicItem) => {
     const newTopic = document.createElement('div')
 
     newTopic.classList.add('tab')
+
+    newTopic.addEventListener('click', () => {
+        const findSelection = () => {
+            
+        }
+    })
     
     newTopic.textContent = topicItem
 
