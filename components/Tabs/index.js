@@ -34,9 +34,17 @@ const createTopics = (topicItem) => {
     newTopic.classList.add('tab')
 
     newTopic.addEventListener('click', () => {
-        const findSelection = () => {
-            
+        // console.log(topicItem)
+        
+        if(topicItem === 'node.js'){
+            topicItem = 'node'
+            const pointer = document.querySelectorAll(`#${topicItem}`)
+            console.log(pointer)
+        } else {
+            const pointer = document.querySelectorAll(`#${topicItem}`)
+            console.log(pointer)
         }
+        
     })
     
     newTopic.textContent = topicItem

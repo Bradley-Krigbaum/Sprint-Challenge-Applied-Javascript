@@ -49,6 +49,7 @@ axios
             })
         }
         newArticle(response)
+        
 
 
     }).catch((error) => {
@@ -63,12 +64,14 @@ const createCards = (cardInfo) => {
     const cardImgContainer = document.createElement('div')
     const cardImg = document.createElement('img')
     const cardSpan = document.createElement('span')
+    const cardCatagory = document.createElement('div')
 
     newCard.appendChild(cardHeadline)
     newCard.appendChild(cardAuthor)
     cardImgContainer.appendChild(cardImg)
     cardAuthor.appendChild(cardImgContainer)
     cardAuthor.appendChild(cardSpan)
+    newCard.appendChild(cardCatagory)
 
     newCard.classList.add('card')
     cardHeadline.classList.add('headline')
@@ -78,9 +81,10 @@ const createCards = (cardInfo) => {
     cardHeadline.textContent = cardInfo[1].headline
     cardImg.src = cardInfo[1].authorPhoto
     cardSpan.textContent = cardInfo[1].authorName
+    cardCatagory.id = cardInfo[0]
 
-    // newCard.classList.add(cardInfo.data.articles.catagoryList.Object.k)
-    console.log(cardInfo)
+    // console.log(cardInfo)
+    
 
     return newCard
 }
